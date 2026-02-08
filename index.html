@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saudi Premium Cab</title>
+
+<style>
+body{margin:0;font-family:Arial;background:#0f172a;color:white}
+nav{display:flex;justify-content:space-between;padding:15px;background:#020617}
+nav a{color:white;text-decoration:none;margin-left:15px}
+.hero{padding:120px 20px;text-align:center;background:#020617}
+.btn{background:#22c55e;padding:12px 20px;border:none;color:white;cursor:pointer}
+.section{padding:60px 20px;text-align:center}
+.grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.card{background:#020617;padding:25px;width:260px;border-radius:10px}
+input{padding:12px;margin:8px;width:90%;border:none}
+footer{background:#020617;padding:20px;text-align:center}
+</style>
+
+</head>
+<body>
+
+<nav>
+<h3>Saudi Premium Cab</h3>
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#book">Book</a>
+</div>
+</nav>
+
+<div class="hero">
+<h1>Luxury Cab Service Saudi Arabia</h1>
+<p>Fast • Safe • Professional</p>
+</div>
+
+<div class="section" id="services">
+<h2>Services</h2>
+<div class="grid">
+<div class="card">Airport Pickup</div>
+<div class="card">City Taxi</div>
+<div class="card">VIP Ride</div>
+</div>
+</div>
+
+<div class="section" id="book">
+<h2>Book Ride</h2>
+
+<input id="name" placeholder="Name">
+<input id="pickup" placeholder="Pickup">
+<input id="drop" placeholder="Drop">
+
+<br>
+<button class="btn" onclick="book()">Book on WhatsApp</button>
+</div>
+
+<footer>© Saudi Premium Cab</footer>
+
+<script>
+function book(){
+let name=document.getElementById("name").value;
+let pickup=document.getElementById("pickup").value;
+let drop=document.getElementById("drop").value;
+
+let msg=`Cab Booking%0AName:${name}%0APickup:${pickup}%0ADrop:${drop}`;
+
+window.open(`https://wa.me/966XXXXXXXXX?text=${msg}`);
+}
+</script>
+
+</body>
+</html>
