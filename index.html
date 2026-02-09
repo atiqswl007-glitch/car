@@ -1,73 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saudi Premium Cab</title>
-
-<style>
-body{margin:0;font-family:Arial;background:#0f172a;color:white}
-nav{display:flex;justify-content:space-between;padding:15px;background:#020617}
-nav a{color:white;text-decoration:none;margin-left:15px}
-.hero{padding:120px 20px;text-align:center;background:#020617}
-.btn{background:#22c55e;padding:12px 20px;border:none;color:white;cursor:pointer}
-.section{padding:60px 20px;text-align:center}
-.grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
-.card{background:#020617;padding:25px;width:260px;border-radius:10px}
-input{padding:12px;margin:8px;width:90%;border:none}
-footer{background:#020617;padding:20px;text-align:center}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Umrah Taxi Service</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-<h3>Saudi Premium Cab</h3>
-<div>
-<a href="#">Home</a>
-<a href="#services">Services</a>
-<a href="#book">Book</a>
-</div>
-</nav>
+    <header>
+        <h2>Umrah Taxi</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#booking">Booking</a>
+            <a href="#vehicles">Vehicles</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<div class="hero">
-<h1>Luxury Cab Service Saudi Arabia</h1>
-<p>Fast • Safe • Professional</p>
-</div>
+    <section class="hero">
+        <h1>Book Reliable Umrah Taxi</h1>
+        <p>Makkah • Madinah • Jeddah • Riyadh</p>
+    </section>
 
-<div class="section" id="services">
-<h2>Services</h2>
-<div class="grid">
-<div class="card">Airport Pickup</div>
-<div class="card">City Taxi</div>
-<div class="card">VIP Ride</div>
-</div>
-</div>
+    <section id="booking" class="booking">
+        <h2>Online Booking</h2>
 
-<div class="section" id="book">
-<h2>Book Ride</h2>
+        <input id="name" placeholder="Your Name">
+        <input id="pickup" placeholder="Pickup City">
+        <input id="drop" placeholder="Drop City">
 
-<input id="name" placeholder="Name">
-<input id="pickup" placeholder="Pickup">
-<input id="drop" placeholder="Drop">
+        <select id="car">
+            <option>Toyota Camry</option>
+            <option>Hyundai Staria</option>
+            <option>Toyota Hiace</option>
+            <option>GMC Yukon</option>
+            <option>Toyota Coaster</option>
+        </select>
 
-<br>
-<button class="btn" onclick="book()">Book on WhatsApp</button>
-</div>
+        <button onclick="sendWhatsApp()">Book on WhatsApp</button>
+    </section>
 
-<footer>© Saudi Premium Cab</footer>
+    <section id="vehicles" class="section">
+        <h2>Our Vehicles</h2>
+        <div class="cards">
 
-<script>
-function book(){
-let name=document.getElementById("name").value;
-let pickup=document.getElementById("pickup").value;
-let drop=document.getElementById("drop").value;
+            <div class="card">
+                <h3>Toyota Camry</h3>
+                <p>4 Passenger</p>
+            </div>
 
-let msg=`Cab Booking%0AName:${name}%0APickup:${pickup}%0ADrop:${drop}`;
+            <div class="card">
+                <h3>Hyundai Staria</h3>
+                <p>7 Passenger</p>
+            </div>
 
-window.open(`https://wa.me/966XXXXXXXXX?text=${msg}`);
-}
-</script>
+            <div class="card">
+                <h3>Toyota Hiace</h3>
+                <p>11 Passenger</p>
+            </div>
 
+            <div class="card">
+                <h3>GMC Yukon</h3>
+                <p>VIP SUV</p>
+            </div>
+
+            <div class="card">
+                <h3>Toyota Coaster</h3>
+                <p>20 Passenger</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>WhatsApp: +966598173626</p>
+        <p>Imo: info@umrahtaxi.com</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Umrah Taxi Service</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
